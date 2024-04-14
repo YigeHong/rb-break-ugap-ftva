@@ -358,8 +358,8 @@ class RandomTBPolicy(object):
             if self.state_probs[state] > self.EPS:
                 self.policy[state, :] = self.y[state, :] / self.state_probs[state]
             else:
-                self.policy[state, 0] = 1.0
-                self.policy[state, 1] = 0.0
+                self.policy[state, 0] = 0.5
+                self.policy[state, 1] = 0.5
         assert np.all(np.isclose(np.sum(self.policy, axis=1), 1.0, atol=1e-4)), \
             "policy definition wrong, the action probs do not sum up to 1, policy = {} ".format(self.policy)
 
@@ -430,8 +430,8 @@ class FTVAPolicy(object):
             if self.state_probs[state] > self.EPS:
                 self.policy[state, :] = self.y[state, :] / self.state_probs[state]
             else:
-                self.policy[state, 0] = 1.0
-                self.policy[state, 1] = 0.0
+                self.policy[state, 0] = 0.5
+                self.policy[state, 1] = 0.5
         assert np.all(np.isclose(np.sum(self.policy, axis=1), 1.0, atol=1e-4)), \
             "policy definition wrong, the action probs do not sum up to 1, policy = {} ".format(self.policy)
 
