@@ -12,6 +12,7 @@ Python version and required packages:
 - numpy 1.24.2
 - matplotlib 3.7.1
 - cvxpy 1.3.1
+- scypy 1.10.1
 
 You can reproduce the Figures in the paper by running the python script `experiments.py`.
 
